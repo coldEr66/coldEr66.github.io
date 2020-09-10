@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>cold66&#39;s blog</title>
+  
+  <subtitle>Practice makes Perfect</subtitle>
+  <link href="https://colder66.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://colder66.github.io/"/>
+  <updated>2020-09-09T12:54:43.141Z</updated>
+  <id>https://colder66.github.io/</id>
+  
+  <author>
+    <name>coldEr66</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>first post</title>
+    <link href="https://colder66.github.io/2020/09/first-post/"/>
+    <id>https://colder66.github.io/2020/09/first-post/</id>
+    <published>2020-09-09T12:47:04.000Z</published>
+    <updated>2020-09-09T12:54:43.141Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="部落格"><a href="#部落格" class="headerlink" title="部落格"></a>部落格</h3><p>最近給自己立定了一個上atcoder紅人的目標，所以開始了一個刷AGC計畫。目前有解掉了許多有趣而且讓我印象深刻的題目，所以希望可以把他們紀錄在 blog 裡面。</p><h3 id="大學"><a href="#大學" class="headerlink" title="大學"></a>大學</h3><p>大學即將開學了，希望之後在大學裡遇到的特別的事情也可以 po 在 blog 上，也希望自己對於自己大學的期望不要落空，好好努力充實自己。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;部落格&quot;&gt;&lt;a href=&quot;#部落格&quot; class=&quot;headerlink&quot; title=&quot;部落格&quot;&gt;&lt;/a&gt;部落格&lt;/h3&gt;&lt;p&gt;最近給自己立定了一個上atcoder紅人的目標，所以開始了一個刷AGC計畫。目前有解掉了許多有趣而且讓我印象深刻的題目，所以希望可以</summary>
+      
+    
+    
+    
+    
+    <category term="daily life" scheme="https://colder66.github.io/tags/daily-life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://colder66.github.io/2020/09/test/"/>
+    <id>https://colder66.github.io/2020/09/test/</id>
+    <published>2020-09-09T12:45:37.639Z</published>
+    <updated>2020-09-09T12:45:37.639Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="My-first-post"><a href="#My-first-post" class="headerlink" title="My first post"></a>My first post</h1><p>I’m coldEr66.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;My-first-post&quot;&gt;&lt;a href=&quot;#My-first-post&quot; class=&quot;headerlink&quot; title=&quot;My first post&quot;&gt;&lt;/a&gt;My first post&lt;/h1&gt;&lt;p&gt;I’m coldEr66.&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="hexo test" scheme="https://colder66.github.io/tags/hexo-test/"/>
+    
+  </entry>
+  
+</feed>
