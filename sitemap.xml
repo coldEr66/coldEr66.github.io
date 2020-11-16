@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://colder66.github.io/2020/11/Graph-Theory/</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://colder66.github.io/2020/09/AGC005-pE/</loc>
     
     <lastmod>2020-09-13</lastmod>
@@ -46,7 +53,7 @@
 
   <url>
     <loc>https://colder66.github.io/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -54,21 +61,21 @@
   
   <url>
     <loc>https://colder66.github.io/tags/daily-life/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/hexo-test/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/atcoder-%E9%A1%8C%E8%A7%A3/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

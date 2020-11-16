@@ -14,7 +14,7 @@
 
 
 
-<title>AGC005-pE | cold66&#39;s blog</title>
+<title>Graph Theory | cold66&#39;s blog</title>
 
 
 
@@ -209,7 +209,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">AGC005-pE</h1>
+            <h1 class="post-title">Graph Theory</h1>
             
                 <div class="post-meta">
                     
@@ -218,7 +218,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">September 13, 2020&nbsp;&nbsp;10:41:20</a>
+                        Date: <a href="#">November 6, 2020&nbsp;&nbsp;11:29:47</a>
                         </span>
                     
                     
@@ -227,13 +227,16 @@
         </header>
 
         <div class="post-content">
-            <h3 id="題目-Sugigma-The-Showdown"><a href="#題目-Sugigma-The-Showdown" class="headerlink" title="題目: Sugigma: The Showdown"></a>題目: Sugigma: The Showdown</h3><blockquote>
-<p>給$n$個點以及$n-1$條紅色邊且構成一棵樹，還有$n-1$條藍色邊構成一棵樹，現在有$A$和$B$要進行遊戲，$A$起始點在$X$節點，$B$起始點在$Y$節點。  $A$先操作，每次可以選擇移動到一個相鄰的節點，或是不動作，$B$後操作，也是每次可以選擇移動到一個相鄰的節點，或是不動作。但$A$只能在紅色邊上移動，$B$只能在藍色邊上移動，$A$希望遊戲進行越多輪越好，$B$希望遊戲進行越少輪越好，請問遊戲最長會進行多少回合（回合是兩個人的操作總次數）？還是永遠不會結束？</p>
+            <h3 id="基礎圖論"><a href="#基礎圖論" class="headerlink" title="基礎圖論"></a>基礎圖論</h3><p>先來說說大學修了一門應數系基礎圖論課的故事。在選課的時候，朋友們都修蠻多學分的，我和好友成俊宏一起選課，原本選了一個涼涼的通識課，結果俊宏抽上了我沒抽上，我就因此少了一些學分。後來好友金刀跟宥嘉發現應數系有一門課叫”基礎圖論”，他們說作業佔40%，期中期末各30%，而且期中期末都從作業裡面出，就想說應該蠻涼的（？）就跟風修了。結果我們大一資工就有8個人去修那門課。目前為止我的作業分數都是滿分，所以還行。</p>
+<h3 id="圖論期中"><a href="#圖論期中" class="headerlink" title="圖論期中"></a>圖論期中</h3><p>我們圖論課的教授很讚，他在考試前把他要考題的方向公佈出來，讓我們比較好準備。在考前一天的晚上，我們其中五個人就一起開了一個6個多小時的讀書會，把所有東西再複習一次，整個過程非常快樂，也對內容更加熟悉，有朋友一起討論真的可以學很快。</p>
+<p>後來就在正式的考試當中，有把難的題目都寫掉，就在大一的期中考就拿到這次考試的滿分:115分。還蠻開心的，但我想我要繼續努力，希望期末考跟下半學期的作業也都可以有好的表現。寫這篇blog除了為了紀念，也是希望能督促自己將來每一科都能夠好好準備，為自己想要的一切努力向前。</p>
+<h3 id="PCCA-團練"><a href="#PCCA-團練" class="headerlink" title="PCCA 團練"></a>PCCA 團練</h3><p>在11/04晚上的交大校隊的團練，打了<a target="_blank" rel="noopener" href="https://codeforces.com/gym/101667">2017-2018 ACM-ICPC, Asia Daejeon Regional Contest</a>這場比賽。那天我和隊友的狀況都還不錯，有好好分配擅長的題目，實作也沒有出太多問題。但我要公審我自己一下，避免自己將來再犯錯。</p>
+<blockquote>
+<p>int 跟 double 不要再宣告錯了。<br>flow 換 s,t 要記得 init graph</p>
 </blockquote>
-<h3 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h3><p>雖然在賽中AC的次數很少，但看完題目我覺得很有趣，就讓我仍然想挑戰看看。首先看到題目就發現他根本就是在樹上玩鬼抓人，但有限制誰只能走哪些路。看完題目最先開始想什麼條件下會永遠不結束。首先我發現如果A的某一條紅邊的兩個端點在藍色樹上的距離大於等於3，A就可以在B距離他為1的時候走到另一個點讓距離變成2，永遠這麼循環，遊戲就不會結束。我定義這樣的邊就做”必勝邊”。所以如果現在A相鄰的邊裡面有存在”必勝邊”，那遊戲就永遠不會結束。<br>所以再來要考慮的就是一些在藍色樹上距離小於等於2的邊。接著有一個觀察，就是$A$必不會往現在跟$B$的點移動。因為如果離$B$更近，不會比待在原地更好，所以我可以選擇待在原地，這個觀察告訴我們，$A$永遠都會在$B$所在的點的子樹裡(藍色樹)。所以現在$B$必定是朝著$A$的方向移動，如果有一個點到$Y$的距離小於等於目前的回合數，那$B$就必定可以在該點抓到$A$。所以$A$的最佳策略就是要保持讓他所在的點距離$Y$超過回合數，才不會被抓到。</p>
-<p>所以如果在$A$能走的範圍內能抵達一個”必勝邊”，那遊戲就永遠不會結束。所以要找的就是$A$可以走到的所有點裡面離$Y$最遠的點就是答案。只需要一個簡單的dfs就可以。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> p,<span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">    ans = max(ans,depb[x] * <span class="number">2</span>); <span class="comment">//depb為藍樹距離Y的距離</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i:adj[x]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == p) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (dis(x,i) &gt;= <span class="number">3</span>) &#123; <span class="comment">//dis(x,i)為x,i在藍樹上的距離</span></span><br><span class="line">            ans = INF;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (d + <span class="number">1</span> &lt; depb[i]) dfs(i,x,d+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (d + <span class="number">1</span> == depb[i]) ans = max(ans,depb[i] * <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<p>這兩個問題讓我們隊吃了兩個WA，我對不起我的隊友QQQ。</p>
+<p>團練會跟基礎圖論放在一起是有原因的！這場比賽的pJ是一題圖論題。<br>這題需要做的事情是先用 Hall’s Marriage Theorem 去算一個不等式，然後發現想找到一些點拔掉後讓圖不連通。所以我就自己通靈出了點割的概念，然後枚舉源點匯點跑flow找最小割，拿到了AC。在過了之後的圖論課，上課就出現了點割這個東西，讓我覺得很巧妙～</p>
+<p>在此希望將來的練習跟圖論學習都順利。目標成為圖論大師！</p>
 
         </div>
 
@@ -248,7 +251,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://colder66.github.io/2020/09/AGC005-pE/">https://colder66.github.io/2020/09/AGC005-pE/</a></span>
+                        <span><a href="https://colder66.github.io/2020/11/Graph-Theory/">https://colder66.github.io/2020/11/Graph-Theory/</a></span>
                     </p>
                 
                 
@@ -261,10 +264,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/atcoder-%E9%A1%8C%E8%A7%A3/"># atcoder 題解</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -275,10 +274,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/11/Graph-Theory/">Graph Theory</a>
             
-            
-            <a class="next" rel="next" href="/2020/09/first-post/">first post</a>
+            <a class="next" rel="next" href="/2020/09/AGC005-pE/">AGC005-pE</a>
             
         </section>
 
