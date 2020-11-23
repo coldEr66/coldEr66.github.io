@@ -6,7 +6,7 @@
   <link href="https://colder66.github.io/atom.xml" rel="self"/>
   
   <link href="https://colder66.github.io/"/>
-  <updated>2020-11-23T07:00:22.346Z</updated>
+  <updated>2020-11-23T13:05:58.165Z</updated>
   <id>https://colder66.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CF Round #685 Div 2</title>
+    <link href="https://colder66.github.io/2020/11/CF-Round-685-Div-2/"/>
+    <id>https://colder66.github.io/2020/11/CF-Round-685-Div-2/</id>
+    <published>2020-11-23T12:19:41.000Z</published>
+    <updated>2020-11-23T13:05:58.165Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="紀錄與心得"><a href="#紀錄與心得" class="headerlink" title="紀錄與心得"></a>紀錄與心得</h1><p>計畫後的第一場virtual，沒辦法說打的好，但也沒有打得特別差。把unofficial的拿掉大概是在180名左右，感覺不是那麼好，希望可以練到穩定前百，不只要練快手速，更要練好正確性及想法速度。</p><p>這場比賽有A~F，E有兩題所以可以說是6題裡解了五題，看了F沒有立即有想法出現，可以說是有把自己會的題目做完了吧，但也意味著自己要更加努力才能在比賽中破台！這場沒有什麼大實作題，所以我覺得我應該要寫得更快才是。希望下一場virtual可以表現更好。</p><h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><blockquote><p>$t$筆測資，給一個$N$<br>有兩種操作:</p><ol><li>找一個$N$的因數把它從$N$裡面除掉</li><li>把$N$減一</li></ol><p>$1 \le t \le 10^{5}, 1 \le N \le 10^9$</p></blockquote><p>這題真的是這場的缺憾，我一開始一直以為是只能找”起初”的$N$的因數，然後送上去WA我以為是有地方寫爛，改一點東西再送一次，意識到原來換數字以後就是換因數QQQQQQQ，花了12分鐘，還吃了兩個penalty，感覺需要再改進&gt;&lt;</p><h1 id="B"><a href="#B" class="headerlink" title="B"></a>B</h1><blockquote><p>$t$筆測資，給$n$, $q$和一個長度為$n$的字串<br>$q$筆詢問，每次詢問問$l,r$<br>問有沒有存在一個不是子字串的子序列等於$l~r$這段子字串<br>$1 \le n,q,t \le 100$</p></blockquote><p>這題看完題目就馬上發現，如果把頭尾斷開，滿足了，要是頭尾斷不開，那其他就也沒辦法斷開，所以就直接開始寫，16分鐘AC，跟上一題只差4分鐘。還不錯～</p><h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><blockquote><p>$t$筆測資，每筆一個$n$, $k$跟兩個長度為$n$的字串<br>可以對第一個字串做兩種操作：</p><ol><li>交換相鄰兩個字元</li><li>把一段長度為$k$而且字元都相同的子字串字母加一，或是z則不能操作</li></ol><p>問能否把第一個字串變成第二個？<br>$1 \le n \le 10^6, 1 \le k \le n$</p></blockquote><p>看完題目發現可以任意換字元就想說，可以排序然後再亂做，然後傳上去吃了WA才發現自己在耍蠢。後來又思考了一下發現順序什麼的根本不重要，我其實只在意每個字元的數量。然後也同時發現，如果需要x個a，那就留下x個剩下全部換成b，然後就只要判斷目前為止夠不夠，以及有沒有辦法全部換，就行了。39分鐘AC，花了13分鐘。下次希望可以想清楚一點再寫。</p><h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><blockquote><p>$t$筆測資，給$d,k$<br>輪流玩遊戲，一開始在座標點(0,0)<br>每次可以把x座標+k, 或y座標+k<br>如果跟圓點的直線距離超過d就輸了<br>問先攻還後攻贏？</p></blockquote><p>是一題熟悉的game的題目，但我覺得我做的有夠慢，其實看完題目就有先想到這是格子點遊戲，做法大致上就是後攻的不管怎樣都可以讓位置保持在x = y，所以如果有個點(t,t)他跟原點的距離小於d而且他能贏，那後攻的必勝。反之如果(t+1,t)或(t,t+1)還能存活，那一開始先攻只要往那個方向，就變成先攻一定能保持在y = x + 1 或是 y = x - 1這兩條線其中之一上，那就是先攻必勝了。</p><p>但我做的時間比想像中還要久，花了22分鐘才搞定。想到有點心態卡住。希望可以早日克服自己一個人想題時心態上的障礙，讓我能想出更多東西。</p><h1 id="E"><a href="#E" class="headerlink" title="E"></a>E</h1><blockquote><p>互動題<br>對方心裡藏著一個長度是$n$的序列($n$是二的冪次)<br>每次詢問我可以問他任意兩個不相同位置的值做AND, OR, XOR的結果<br>easy version可以問n+2次<br>hard version可以問n+1次<br>1 \le n \le 2^16</p></blockquote><p>這題看完之後就覺得感覺蠻有趣的！首先可以先發現XOR比較有用，再來發現AND跟OR沒有唯一性，就讓我陷入思考了。後來我想到有唯一性的”加法”！就把 a+b = a xor b + 2 * (a &amp; b) 寫下來，然後就迅速找到了n+2的解了。然而我沒有開始寫是因為我覺得n+1跟n+2相似性應該很高，所以我就繼續思考。但我不知道這樣的策略好不好，因為寫完要比想完慢才不會虧，但如果難很多我就拿不到分數了&gt;&lt;</p><p>我的做法是把1對每個人做xor，這樣就會有三種case：</p><p>如果1跟某個人xor起來是0，那就代表他們兩個一樣，我就可以拿他們兩個來問AND去得到他們的值。就只要$n-1 + 1 = n$次詢問。</p><p>第二種狀況是如果有兩個人跟1 xor的值一樣，就代表他們兩個相等，就可以做跟上面一樣的事情。</p><p>第三種則是，如果以上兩種沒有發生，那就代表後面$n-1$個值裡，不存在0，兩兩不相等，所以1到n-1要分在n-1個桶子，而且兩兩不相等，就代表1到n-1各要有一個。所以要算上面那個加法式子，會需要n-1 + 3次AND也就是$n+2$次詢問，但是如果他們xor起來是$n-1$，就等價於他們AND起來是0。我就可以少問一次AND，也就是達到了$n+1$次的詢問。這樣就能拿到AC。</p><p>一開始不小心直接拿1,2跟xor是$n-1$的來做加法解連立，結果忘記那個位置可能等於2了，找bug找快要10分鐘，還好後來有及時找到！</p><h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>感覺這是這個計畫的一個不錯的開始，希望將來能繼續保持熱忱，繼續變得更強，也往自己理想的模樣更進一步！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;紀錄與心得&quot;&gt;&lt;a href=&quot;#紀錄與心得&quot; class=&quot;headerlink&quot; title=&quot;紀錄與心得&quot;&gt;&lt;/a&gt;紀錄與心得&lt;/h1&gt;&lt;p&gt;計畫後的第一場virtual，沒辦法說打的好，但也沒有打得特別差。把unofficial的拿掉大概是在180名左右，</summary>
+      
+    
+    
+    
+    
+    <category term="virtual plan" scheme="https://colder66.github.io/tags/virtual-plan/"/>
+    
+  </entry>
   
   <entry>
     <title>Virtual Plan</title>
