@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="coldEr66">
+
+
+    <meta name="subtitle" content="Practice makes Perfect">
+
+
+
+
+<title>Learning the structure of similarity | cold66&#39;s blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+    
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/custom_css_source.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="cold66's blog" type="application/atom+xml">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">coldEr66&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">coldEr66&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Learning the structure of similarity</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">coldEr66</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">August 16, 2021&nbsp;&nbsp;17:28:43</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="MIT-Joshua-Tenenbaum-Lab"><a href="#MIT-Joshua-Tenenbaum-Lab" class="headerlink" title="MIT Joshua Tenenbaum Lab"></a>MIT Joshua Tenenbaum Lab</h2><p>最近仔細想了想發現自己還是真的很喜歡這個教授的研究內容跟方向，所以打算先來看看他的 Lab 有發過的一些 paper 並且累積靈感，如果最後確定，希望將來有緣能到那邊做事。</p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>從數學的角度來看，similarity 可以粗略地分為兩種，一種是 spatial model ，顧名思義就是特徵或類別在空間中的分佈，而他們有沒有相似可以用在空間中的距離來定義，要相像就希望他們在空間中越接近，最常用的就是 Euclidean distance；而第二種就是 set-theoretic model，基本上就是我們可以把特徵表示成若干個集合，那我們就透過兩個特徵他們的集合的物品內的某個加權總和來計算他們的相似性。</p>
+<p>如果使用 hierarchical clustering 來探討 set-theoretic 的相似性的話，會有一個問題是 hierarchical clustering 需要每個集合是互斥且獨立的。然而，在認知科學的屬性裡面，常常都會有許多個體、集合擁有相同的屬性或類別，所以集合與集合之間就很難是互斥且獨立的。而這篇論文有提到一個方法叫做 additive clustering，基本上他就是一個不用有任何 clustering 結構假設的方法，但這個方法的問題是他不好跟觀察到的 similarity 資料做比較，所以還是很困難。而他計算 similarity 的方法是：<br>$$<br>\hat{s}_{ij} = \sum_{k=1}^{K} w_{k} f_{ik} f_{jk} + c<br>$$<br>$w_{k}$ 是 cluster $k$ 的權重（顯著性），而$f_{ik}$ 是屬性 $i$ 是否在 cluster $k$ 之中，如果有就是1否則就是0。而這個$c$會出現是因為通常 similarity 是 interval scale 的資料。而這些 scales 我覺得蠻有趣的，畢竟是我原來不知道的知識，受益良多！</p>
+<h4 id="Levels-of-Measurement-in-Statistics"><a href="#Levels-of-Measurement-in-Statistics" class="headerlink" title="Levels of Measurement in Statistics"></a>Levels of Measurement in Statistics</h4><p>資料有分成很四種不同的 scales 等級，由低到高等分別是 nominal scale, ordinal scale, interval scale, ratio scale ，每個等級都會有比它更低的等級的性質。 nominal scale 是只有給資料名稱或 label，沒有特定的順序或量級之分，例如A物品跟B物品。 ordinal scale 是代表資料有順序之分但沒有數學量級上的定義，例如非常不滿意、不滿意、普通、滿意、非常滿意。而 interval scale 是指資料有順序之分而且還能用算數的量級來表示，而且數值之間的差值是等重的。比如說攝氏溫度$-10 \sim 10$度C。最後就是 ratio scale，它擁有第三級 interval scale 的所有屬性，而且它還可以知道絕對的 0 值的位置在哪，還有他的數值都不會低於 0，而 interval scale 是可以低於0的。比如說一天走多少步，選項有$500$步以下、$500 \sim 1000$步、$1000$步以上。</p>
+<p>而 interval scale 和 ratio scale 看起來好像很類似，其中他們最大的差別就是 interval scale 沒有絕對的 0 值，而相對地 ratio scale 有一個絕對的 0 值。而 interval scale 的資料並沒有表示出任兩個資料之間的任何比例關係。</p>
+<h4 id="Similarity-通常是-interval-scale-的資料"><a href="#Similarity-通常是-interval-scale-的資料" class="headerlink" title="Similarity 通常是 interval scale 的資料"></a>Similarity 通常是 interval scale 的資料</h4><p>看完上面的介紹之後，similarity 通常是 interval scale 的資料就非常合理了，因為相似度沒有所謂的絕對的 0 的位置，而且數值之間也沒有什麼特別的比例，但他也確實是可以被量化的屬性，所以它就是一個在interval scale 之上，但不到 ratio scale 的資料，所以說他通常是 interval scale 的資料。而既然是 interval scale 的資料，被任意平移就是沒有差別的了，所以才加上了$c$這個常數。</p>
+<p>如果想要比較，可以把它轉成Least square problem，我們希望的就是最小化 squared-error energy function：<br>$$<br>E = \sum_{i \neq j} (s_{ij} - \hat{s}_{ij})^2<br>$$<br>這樣就代表給定一個 cluster 的分配，我可以用線性代數的方式找出一組最好的$w_k$。然而一個好的cluster 分配就是比較困難的問題。過往有用 ADCLUS 和 MAPCLUS 都用組合最佳化來解決問題，但有時會得出不太可解釋的結果。而這篇 paper 提出的是一個基於 Expectation-Maximization 的方式，目的就是希望可以建立一個能夠解釋的 clustering 方法。</p>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><h4 id="formulating-the-problem-Maximum-Likelihood-Formulation"><a href="#formulating-the-problem-Maximum-Likelihood-Formulation" class="headerlink" title="formulating the problem (Maximum Likelihood Formulation)"></a>formulating the problem (Maximum Likelihood Formulation)</h4><p>他透過把 $w$ 視為模型的參數，而 $f_{ik}$ 為觀測資料 $s_{ij}$ 的 hidden causes，而我們可以以機率模型的方式把完整的資料寫成$p(s,f|w) = p(s|f,w)p(f|w)$（所謂「完整」是因為同時有觀測資料跟我們計算的非觀測資料）。而其中他們想要的是最小化 squared-error energy function，所以他們把 $p(s|f,w)$ 以變異數為$\sigma^2$的高斯分佈的方式寫成：<br>$$<br>p(s|f,w) \propto exp \lbrace - \frac{1}{2 \sigma^2} \sum_{i \neq j} (s_{ij} - \hat{s}_{ij})^2 \rbrace = exp \lbrace - \frac{1}{2 \sigma^2} \sum_{i \neq j} (s_{ij} - \sum_{k} w_{k} f_{ik} f_{jk})^2 \rbrace<br>$$<br>而對其取 $\log$ 就可以得到 $\log p(s|f,w) = - \frac{E}{2 \sigma^2}$。而其中的 prior $p(f|w)$ 可以決定我們偏好什麼樣的 clustering ，然而這篇論文他們只有考慮 uniform 的 prior probability。 </p>
+<p>我覺得這個部分可以想像成他對這個問題的假設，他將問題視為高斯分佈然後再透過後面的 EM algorithm 去優化這個問題。</p>
+<h4 id="The-EM-algorithm-for-ADCLUS"><a href="#The-EM-algorithm-for-ADCLUS" class="headerlink" title="The EM algorithm for ADCLUS"></a>The EM algorithm for ADCLUS</h4><p>現在有了上面的機率模型，那就可以使用 EM algorithm 來計算最好的參數。可以把上述的式子寫成：<br>$$<br>Q(w|w^{(n)}) = \sum_{f’} p(f’ | s,w^{(n)}) \log p(s,f’|w) = \frac{1}{2\sigma^2} \langle -E \rangle_{s,w^{(n)}}<br>$$<br>其實上式的$Q(w|w^{(n)})$ 跟 $E$ 的期望值是等價的，因為我們考慮每種分配的可能$f’$並且把他們的機率乘以他取 log 的 likelihood，正是他的期望值。</p>
+<p>有了這樣的期望值式子以後，就不斷迭代它，每次都拿最大值的參數 $w$ 來作為 $w^{(n+1)}$。而最後我們不只就能求出每個 cluster 的 weight，還能透過給定 observed data 和權重 $w^{(n)}$ 來求出每個 cluster  membership 的機率$p_{ik}$，而最終迭代出來的結果 $p_{ik}$ 要馬很接近 0 不然就是很接近 1，我們就能說哪個物品屬於是不是某個 cluster 了。</p>
+<p>由上面的式子可以得知，只有在$\sigma^2$很小的時候，代表我們的機率分佈比較集中，而且我們的 EM 也才可以到最大，還有代表 cluster membership 的機率會比較接近 0 跟 1。</p>
+<h4 id="Simulated-annealing"><a href="#Simulated-annealing" class="headerlink" title="Simulated annealing"></a>Simulated annealing</h4><p>這個部分要講的就是他怎麼去逼近最大值。由於目前解決這種問題的方法在現在這個問題上的運算量還是太大了，所以他們採用對$\sigma^2$模擬退火的方式，然後讓他收斂到最佳的值上。</p>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p>他們是先用人造的資料去確認他們的想法是可行的。接著就是他們測了各種分群方式的狀況，他們的模型只要知道總共有幾類，如果知道的分類數越接近真正的分類數，模型準確度就越高。而他們的結果都是舊的 ADCLUS 和 MAPCLUS 做不到的。而後來也用了這個模型去分析數字0-9的特性，以及拿了16個子音來分類他們的辨音性。而這些資料集都是 ADCLUS 和 MAPCLUS 有分類過的資料，所以也方便拿來比較。</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>結論主要就是他們這篇論文設計了一個新的算法可以用在 ADCLUS 上，這樣的新算法可以讓學習的效率更好，還有學習出來的結果更為優秀。而且他們認為學習 similarity 就是其中一種學習生成模型的 hidden feature 的方式，希望可以繼續往認知科學上生成方面的問題做到更好的詮釋，而也希望可以透過這篇論文來告訴大家計算模型的學習在認知科學領域中是非常重要的。</p>
+<h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>我整篇看得很開心XD畢竟很多模型上的設計，以及遇到什麼問題時，有個很奇妙的方式去應對它。而也對我自己同時有知識上、視野上的突破，感覺真好XD。這篇其實看了蠻久的，希望自己之後看論文的效率可以更好，看快一點然後同時可以擷取裡面的重點QQ加油吧！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>coldEr66</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://colder66.github.io/2021/08/Learning-the-structure-of-similarity/">https://colder66.github.io/2021/08/Learning-the-structure-of-similarity/</a></span>
+                    </p>
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/paper-reading/"># paper reading</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/05/%E9%9D%9C%E4%B8%8B%E5%BF%83%E8%8B%A6%E7%B7%B4/">靜下心苦練</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© coldEr66 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
