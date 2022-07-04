@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="coldEr66">
+
+
+    <meta name="subtitle" content="Practice makes Perfect">
+
+
+
+
+<title>暑假gogo | cold66&#39;s blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+    
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/custom_css_source.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="cold66's blog" type="application/atom+xml">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">coldEr66&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">coldEr66&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">暑假gogo</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">coldEr66</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 4, 2022&nbsp;&nbsp;10:19:51</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>好～久好久沒有發文在這裡了呢！雖然我一直想好好記錄自己的生活，但我可以摸著良心說不是因為懶惰而是因為真的太過於忙碌了&gt;&lt;所以就只能像這樣偶爾做一次紀錄吧！當然希望接下來可以有更穩定的作息，然後更有效率地做著每一件事。這篇文就分三個部分吧，回顧一下大學前半，然後講一下 7/1 這個好日子的心得。</p>
+<h2 id="我的大學前半"><a href="#我的大學前半" class="headerlink" title="我的大學前半"></a>我的大學前半</h2><p>這個部分真的好多好多可以寫呢，但我想從我的心境的角度出發吧！也希望如果有緣看到這篇文的人們可以知道我就在這裡這樣地努力著。雖然我稱不上是個成功的人，但整體上我自己覺得我還蠻勵志的，希望可以用我的經歷來鼓勵更多人去為了自己的理想而奮鬥！</p>
+<h3 id="過度強求：一上"><a href="#過度強求：一上" class="headerlink" title="過度強求：一上"></a>過度強求：一上</h3><p>我是個好勝心很強的人。高中時接觸到了資訊競賽，我就一直夢想著可以馳騁在國際奧匹的戰場上。然而，現實就是如此地殘酷，我的夢想不斷地在降低。從當上國手，變成進入選訓二階，再變成學測考上台大…我自己就是個一直退縮的人，在高中的三年，上演著被體制打敗的一齣劇。雖然用了勉勉強強的競賽成績申請上了交大資工，但我那時候的心境是「我淪落到交大了」。這麼想雖然很不尊重交大，但我很確定我那時候就是這樣想的。再繼續下去之前，我必須要說，雖然有一些「好處」，然而整體來說，現在的我很討厭那時候的自己，請接著看下去XD這個小節的標題是「過於強求」，來說說我上了大學的第一階段過於強求的優缺點跟回顧吧。我會用回顧穿插優缺點的方式來講述，敘述能力很差請見諒QQQQ</p>
+<p>缺點很多我先講缺點吧。老實說正因為高中輸得很慘，那時候的我超級沒有方向。我唯一有的想法就是「現在能做的就是讀書，就用力讀吧，顧好成績應該是最重要的。『聽說』申請研究所就是看成績。」我特別強調聽說就是一種埋頭苦幹的現象，我沒有去求證，我也沒有去尋找，到底該做什麼？抑或是說還能夠做些什麼？所以其中一個缺點就是完全不知道自己到底在哪，也不知道自己到底在做什麼，也沒有自認到需要去了解這些。而再來就是我的讀書方式，因為覺得「一定」要顧到非常非常好，讀書時真的是錙銖必較，沒有掌握好內容時就會十分煩躁，然後又一些其實很沒有效率但很暴力的方式去搞定他，比如說某種程度上的背起來。回想起來自己真的超級無腦的XDDD後面的其他經歷完全可以跟這些東西形成對立跟呼應。而這兩個主要的缺點其實就足以讓我超級痛苦，因為不知道自己在哪導致常常努力會沒有回報，而因為容易因為表面上的「分數」而急躁，就會讓自己的效率變得更差，更是加上沒有檢視自己的環節，就此惡性循環…雖然一上我應該是校排第一名，但說來慚愧，我覺得我就是一個死讀書仔 + 一個靠著一些本來就具備的能力得到這個稱號，而我想當時能看的應該也只有這個稱號了吧？但說實在的那也算是我第一次努力有所回報，算是一種還蠻不錯的正回饋吧。</p>
+<p>而唯一的一個好處就是，至少我還沒完全放棄？如果那時候我就直接低迷放棄的話，我想我現在也不會這麼快樂吧XD也不會有現在這種習慣專注的狀態。我認為以我那時候的觀點能做到的應該就是那樣了，所以我已經很感恩了XDD但如果真的要講的話我會希望自己可以多多注意自己的周遭跟多多想想到底接下來要怎麼走吧！</p>
+<p>而這些都是一上的故事，在這裡記錄一下一上的一些值得紀念（？）的事情。一件是我印象很深刻那時候修了六科有期末考的科目，而我六科期末考的中位數是 99 （滿分都是 100 ），其實是蠻值得驕傲的事情XDDD（雖然有些其實不是靠理解是靠背書就是了XD）；而還有一件事是我有修一門基礎圖論，我期中考很輕鬆地拿了滿分 115 分，而每次作業都是拿到全班最高分，然後期末考也是全班唯一一個大於等於 100 分的人XDDDD我覺得這算是我大一上比較鬼的事蹟吧（？）但可以看出也就僅限於成績，真的沒有什麼其他經歷（ICPC 除外，因為我們在大比賽就都挫賽，打得沒有很好QQ）。</p>
+<h3 id="緩下腳步：一下"><a href="#緩下腳步：一下" class="headerlink" title="緩下腳步：一下"></a>緩下腳步：一下</h3><p>雖然我自己是一個精神上跟生理上體力跟精神強度都很強的人，但經過一上那樣對自己的洗禮以後，自己的那些專注真的在一放寒假之後就完全崩解。寒假時我就開始思考關於自己未來的工作的部分，詳情可以去看一下 <a href="https://colder66.github.io/2021/03/%E6%96%B0%E8%A7%80%E9%BB%9E/">新觀點</a> 那篇文章，在這裡就不贅述了。而一下的自己其實就是透過放鬆一點發條，讓自己去多接觸一點不同的東西。比如說我參加了系排，去學習一種新的球類；我進了一個實驗室 (<a target="_blank" rel="noopener" href="https://sites.google.com/view/wei-cecnl/">CECNL</a>) ，也認識了一些不同的人們，還有也因為一些因緣際會認識了一些系上的朋友。繼續說說「那時候」的心境，其實整體上是快樂的，因為接觸的東西都是全新的，不得不說新鮮感滿滿的時候真的超級美妙的XDDD在實驗室裏看的論文跟做的事情都覺得非常有趣然後很起勁，做什麼事情都覺得很有動力。但做了一些其他事情，加上我本來就不是個很會規劃跟利用時間的人，我的成績其實就有顯著的變差。但我也覺得很合理，因為一方面沒有像大一上那麼追求分數的極致，而且也做了很多其他事情！那個時候的心境大概是覺得自己找到一個新的天地吧，像是來到一個新的地方的喜悅感，我覺得我自己的想像力也是很豐富，只是多做了一些事就可以像是到了新環境一樣的雀躍，但這也是我的特色之一吧XD</p>
+<p>用一樣的架構講一下大一下的值得留念的事情。其實相對比較少吧XDDD畢竟其實各方面表現都不突出。有一件事是因為事情的量變多了，一時沒有安排好時間，我期末的時候有一整週都是早上五點睡早上十點起床繼續做事跟讀書的模式，真的快搞死人了&gt;&lt;而另一件事是我印象非常深刻我寫了好幾屆（大概6屆吧？）微積分大會考考古題，我的平均絕對至少有 95 （好幾次都 100），而且我自己寫證明也不會太簡陋我相信手寫不會被扣太多分，結果氣死人的是居然因為疫情停辦了==我超難過的，因為我一上的大會考考的超級失常，想要用下學期的大會考用力地報仇，結果他居然給我停辦==雖然貌似是救了很多人啦XDDD但我自己的小願望還是希望可以讓自己報仇雪恨一下，結果沒有實現哈哈哈。</p>
+<h3 id="認清周遭：升二年級"><a href="#認清周遭：升二年級" class="headerlink" title="認清周遭：升二年級"></a>認清周遭：升二年級</h3><p>接著就是進入暑假。我參加了一個活動叫做 Machine Learning Summer School，那是一個會找各種頂尖研究者來講 machine learning 主題的活動。老實說那個活動的難度遠超過我當初的水準，絕大多數的內容我都聽不懂，甚至有六成的內容都是我連「聽都沒聽過」的東西。雖然內容很多數學難道沒辦法馬上理解，但至少讓我增加了不少知識量。這個活動對我來說的收穫我覺得不算非常大，但我覺得至少是我那個暑假裡還蠻重要的一個環節。</p>
+<p>這個小標叫做認清周遭的主要原因就是從前面可以看到一些關鍵詞：「新鮮感」、「雀躍」、「新的天地」等等，我覺得那些都是確實存在的，但是是確實存在過的。在做實驗的過程中，心境從「哇這些都超級酷」緩緩地慢慢轉變成「好累喔…怎麼都在做一樣的事情」。那個時候做的實驗大概就是不斷地在調整參數，而因為自己閱讀文獻的能力也不夠，對於更加進步的模型架構也沒有很全面的認知，儘管我設計出了一個稍微可以提升準確度的模型，也無法準確說明為何會有這樣的進步。我開始發現，就算我說我想試試看做研究，也不是一條多好走的路，畢竟我原本的技能點都用在工程方面的實作跟解決問題上了，提出問題、提出新的發想這些對我來說還是非常吃力的。更何況我那時做的是跟神經科學相關的計算神經科學，其實要做的更深入我需要一些生物相關的背景知識，在前幾篇 posts 中我也有提到我有在看神經科學的課本。然而，讀生物本來對我來說就最多只能是個興趣，要把它變成貨真價實的工作其實還是有很大的難度在的。所以這個時候，「新鮮感」消失了，「雀躍」不已的心情也不見了，至於「新的天地」呢…這確實是一個新的天地沒錯，但仔細去的認清周遭的環境，就好像是我身在一個不同語言、不同氣候而且完全無法互動跟交流的環境一樣，這是一個我無法長期生存的地方。我開始厭倦閱讀文獻、開始厭倦規律地讀課本、更開始對於做實驗感到煩躁，屆時我發現，研究什麼的對我來說應該還是太難了，我不愛做這些事情，我想</p>
+<blockquote>
+<p>研究本來就不適合我吧…</p>
+</blockquote>
+<p>但是我還是很快樂的讚揚了我自己，因為有了嘗試才更能知道自己到底面臨了什麼跟了解了什麼，不再是那個只會看到眼前所見然後埋頭亂衝的我了，我在心境上有了很大的突破，我也沒有因為這樣就覺得氣餒或是覺得自己浪費了很多時間，畢竟這樣的經歷也更能讓自己去尋找下一個目標。如果是一上的我，我應該會一直責備自己然後把自己搞瘋吧XDDDD然而對我來說，真正的考驗現在才要開始，因為原本有的方向不見了，我究竟是要繼續研究之路呢？（但當初自己覺得機會不大，畢竟就是不愛看文獻，不愛做實驗）還是要重新開始規劃原本的美國工程師賺大錢計畫？（但好像又沒那麼實際，因為我或許又會回到大一上那種只顧成績的狀態）所以那個時候雖然很順利的把各種事情告了一段落，但接下來的挑戰才是極為困難的。</p>
+<p>在二上開學時，我想說大學還是得要進實驗室做專題，所以我還是有持續在尋找實驗室。我一開始想說一樣考慮跟 cognitive AI 有關的主題，也就想說去找陳奕廷教授做專題。後來因為其實踟躕了很久，會猶豫不決的原因是我其實已經不知道自己到底要往研究方向發展還是就專注弄成績然後弄 SWE 實習，因為之後要做研究的話，只有 SWE 實習是沒有辦法申請上好的 PhD 的。到很接近申請季才決定的話成功率就會非常低，是很不好的情況。所以我一直不知道我到底該怎麼走。雖然說都可以看看，但如果自己一直抱持著看看的心情，沒有勇敢跨出那一步的話，我就無法走到不一樣的天空吧。而且我的心裡其實還是相信著做研究這件事情的，因為我真的覺得如果可以了解某一個領域人類知識的邊疆的話是一件很榮幸而且很酷的事情！因為「我是第一個耶！」</p>
+<blockquote>
+<p>我覺得這是一個很幸福的體驗跟感覺，就像賽跑可以拿到第一名一樣。只不過真正快樂的不是贏過他人，而是這些努力刷新的人們的認知，還有增長了自己的見聞！現在的我常常覺得在世界上某個領域最頂尖的人，他們對於那個領域都有比別人更深一層的了解跟認知，所以他們才能一直不斷的突破跟看到更遠的天空。而我想這對我來說也是興奮跟帥氣的。</p>
+</blockquote>
+<p>回到正題，我又不斷地思考我到底喜歡什麼東西，到底是要跟人的神經系統絕對相關的 AI ，還是只是很喜歡 “learning” 這個概念呢？經過很長的思考我其實沒有得出很明確的答案，但是我至少明白了我想要的是可以被解釋的 AI ，而不是只是調整參數跟各種「不知為何」的架構得來的好表現。而在這個尷尬的時機點，我迎來了轉機…</p>
+<h3 id="幸運：啟程"><a href="#幸運：啟程" class="headerlink" title="幸運：啟程"></a>幸運：啟程</h3><p>有個學長跟我說謝秉均教授做的研究很有趣，而且很數學。其實我一直以來都非常喜歡數學，我也喜歡嚴謹的證明，我覺得那些邏輯思考都非常有趣。我就抱著好奇的心情去跟秉均教授約了一次面談。接著是一個我認為超級值得紀念的故事！也是一個超級熱血的故事！也同時是現在的我在走的道路的起點。</p>
+<p>去跟秉均教授面談時，他說他主要有在做兩個部分，其中一個是「強化學習的理論背景」。<br>我心想：「強化學習的理論？理論？什麼意思？」<br>教授說：「其實很多演算法是沒辦法在理論上證明他是可以得到很好的結果的，甚至連會不會收斂都不知道。而這類型的研究就是在用理論的方式去證明這些演算法的效率跟能力。」<br>我聽了覺得萬分興奮，沒想到還有這種證明跟探討算法底層的研究。這種東西完全符合「用數學去理解算法」這件事情，也充滿的 “learning” 這個概念，我想這或許會是我嚮往已久的內容，我想這或許會是我極熱愛的領域。接著我就跟教授說：「我自己非常喜歡數學跟證明，我會想要嘗試看看這個領域。」<br>當時我感覺教授的表情蠻驚訝的，我猜他可能不覺得有學生會說自己喜歡理論的東西吧XDDD他在這個時候就丟出了一個問題，他跟我說：「做理論的研究者常常會被問一個問題，那就是『為什麼要做理論研究？如果現在的算法已經在各種環境跟資料上有非常非常好跟穩定的表現了，為何還要做理論研究？』如果我拿這個問題來問你，你會怎麼回答？」<br>我聽了覺得這是一個非常深奧的問題，但我自己本來就有一個對於這類問題的答案，因為我曾經就想過到底為什麼我會想要做「可被解釋的 AI 」，我就經過一番思考並且整理好我要說的話之後，我說：「我覺得是因為要是有了理論的證明，才是提供一個全面的可靠的結果吧？如果只是在『大部分』的資料上有好的表現，不代表『完全不存在』可以讓演算法不 work 的資料。所以有了理論證明才有真正可靠的證明，才能讓使用這個算法的人事物有保障。」<br>教授回我說：「你的答案蠻好的，只是如果是我我會說『因為我們想知道它的極限在哪裡』。」<br>OH MY GOD! 我心裡覺得：「怎麼這麼帥XDDDD這真的太帥了！」快速地想一想發現超級合理的呢！<br>教授接著說：「如果我們知道它的極限在哪，我們才知道現在的算法還有沒有『進步空間』，也更能知道『如何更加精進這些算法』。」<br>我瞬間理解到理論研究的價值遠遠比我想像的還要更高尚以及神聖。排球少年的木兔跟月島說過</p>
+<blockquote>
+<p>如果『你的時刻』來臨了，那就是你愛上排球的瞬間！</p>
+</blockquote>
+<p>我想這個瞬間就是讓我想要再次去嘗試跟努力的動機吧！雖然這稱不上是我的時刻，但至少我深深地被這段對話吸引，我也被那種研究內容感動。所以我就跟教授說我想要試試看，希望他給我一些論文閱讀看看。這次的面談就到這裡結束了，我認為是一個超級熱血的故事XDD而且振奮人心！我當下真的起雞皮疙瘩！而且到現在都還記憶猶新。</p>
+<p>接下來就是找到方向之後的挑戰了哈哈，每一篇理論研究的論文都有一大堆數學式子，然後常常不知道為什麼這個式子長這樣XDD看一篇論文都要看超級久，但那時候自己也不知道怎麼讀論文，所以做一堆事情都超級沒有效率的。而同時還有系上的課業要顧，二上的課業其實整體來說蠻繁重的，而且除了課業以外，我還有去參加一個跟陽明合作的團隊，那個團隊也是蠻爆肝的。二上的生活真的是極其不健康，完全不知道自己的作息是什麼鬼XDDD而且幾乎整個學期都是那種鬼作息…</p>
+<p>總結來說二上其實就是我的強化學習理論地圖，簡稱 RL 理圖（RL 旅途XD），的起點。在年底的時候有了一個很可做的研究，就從那時候開始著手做那個題目。而去了陽明也認識了很多新朋友我覺得很快樂XDD還有我也在我最愛的機率課上拿到了很好的成績，反映了我認真學習還有深入去瞭解機率的結果（到現在我都還有在繼續學機率XD繼續努力哈哈）。而這學期開始了我的效率學習法，也就是學每一科不要吹毛求疵也不要鑽牛角尖。最重要的是在於「理解」而不是只求「答對題目」。我經過實驗發現，其實只要能理解，大部分考試的題目都能解出來，練習的時候要透過反覆的思考跟反問來想，然後透過少量的題目來激發一些自己原本沒想到的面相，然後再整理出自己的對於每一個科目的認知圖（類似心狀圖），這樣對於我的學習是非常有效率的。所以我比起大一時，我花了較少的時間讀書，而且我認為我學的比原本更深入了，因為理解以後就可以發現裡面很多有趣的想法！二上那個學期我的機率拿到了很好的分數以外，我也修了另一堂圖論：資工系的「圖形理論導論」。我在那一堂課中也是兩次考試都拿到 100 分，而且甚至期末考的標準答案是我的考卷，因為教授出的題目有些問題XDD真的很榮幸也覺得非常有趣。這個學期也是我第一次在大學拿到平均 GPA 4.3 的學期成績。綜合以上來說，我覺得這完全可以說是我在首戰上打出漂亮的勝仗！我也對於自己的表現都足夠滿意（一定還有很多可以挑剔的XD只是就留到未來的日子裡努力吧&gt;&lt;）</p>
+<h3 id="追逐卓越：加油-gt-lt"><a href="#追逐卓越：加油-gt-lt" class="headerlink" title="追逐卓越：加油&gt;&lt;"></a>追逐卓越：加油&gt;&lt;</h3><p>二上可以說是啟程吧，而二下可以說是…挫折（？）這樣定義有點奇怪XD但還是可以說是某種挫折。會這麼說的原因是，我開始發現了自己很多很多的缺點跟可以改進得地方。比如說以下這個故事：</p>
+<p>「在某一次跟秉均教授 meeting 的時候，我在跟他討論一些做的其實還不錯的 papers。然而我自己看完了一次我其實只有想到一些發展性跟這個研究的一些有趣的點子，秉均一看完就問我說：「這東西實作起來要怎麼弄？」我一開始還完全沒懂是什麼意思，結果聽懂之後發現這個演算法真的需要額外在做一些處理才是可以真正實行的，但我居然完全沒發現QQ經過這次開會我發現我非常缺乏實作方面的直覺，我也常常看著一個 pseudo code 覺得他都非常合理，然後其實有很多實作上需要注意的事情！我想到解決的方法就是我打算找我一個好朋友一起去參加 reproducibility challenge ，我希望能多參加幾屆，一方面增進實作能力，也希望可以從中得到更多 intuition 來輔佐我之後的研究能力，我相信秉均教授也是實作跟理論兼備才有辦法迅速想到這些問題的。」</p>
+<p>這是我某一次開會以後記錄下來的心得，我發現我缺乏這些能力，我就只能比他人看到更少的東西，這是我其中一個要精進的地方。</p>
+<p>再者，我也發現我找論文跟讀論文的能力都很差QQQ常常找文獻找的不完全，或者是讀論文花了一堆時間還是沒有掌握重點。雖然這些現在有顯著改進，但我覺得我還可以再更加精進我這兩個方面的能力，這也是我接下來需要面臨的課題。</p>
+<p>還有秉均教授真的教會我了好多好多東西，還有一個值得分享的就是 backward induction 的技巧。做一件中長遠的事情時，秉均教授教會我說我們都應該先立足於做完的那一刻，去看我們到底需要什麼，再一步一步做反向的推演，來得到每一步該做什麼跟每一個時間點要完成多少事情。</p>
+<p>還有我也發現我其實過了兩年我沒有完全改掉「不注意周遭」的缺點，這也是我自己要提醒自己跟精進的地方進而提升自己的各種效率跟能力！</p>
+<p>至於二下讀書/成績的部分，我一樣沿用了我的「理解讀書法」，我這個學期很荒謬的有一科的期中期末考都只花一天準備而已（真的太忙了QQ），但其實都沒有考得很差，還在可接受範圍內，我認為是很好的現象！希望今後能繼續保持。而這學期也修了兩堂跟 AI 理論有關的課程，拓展了自己的眼界跟知識，現在只有「還有很多東西可以讀誒XDDD讀不完了哈哈哈」的感覺。整體上各種成績都還蠻好的，也要感謝有 final project 的隊友有 carry 我，不然我應該現在已經死了XDDD成績還沒都出來但整體上應該很不錯吧！</p>
+<p>對我而言二下其實還有很多其他心得但是在這裡就不贅述了，如果有機會我想留到之後的貼文來講XDDD總之回顧就到這裡！</p>
+<h2 id="7-1-心得"><a href="#7-1-心得" class="headerlink" title="7/1 心得"></a>7/1 心得</h2><p>今天是超級有趣的一天！早上在空閒的時間看輕小說，看喜歡的故事設定跟發展，覺得很愜意。很難得的電腦平板手機都沒電而且甚至沒有充電器還可以過得那麼舒適跟輕鬆，真的是難得的時光。</p>
+<p>後來下午與秉均教授開會討論研究方向跟主題，真的是一種新的體驗。我認知中的博班，就是要有一個很大的研究問題，他是大方向的而且涵蓋多個面向的研究問題。我們主要討論的研究方向是 Offline RL，今天討論前我有先想好幾個研究題目，想要徵求老師的建議。而我們的討論中非常嶄新、快樂、新奇的部分是我們在討論的過程中，不斷地想出這些問題的價值或是可以質疑的點，來更加的精煉這些題目。我覺得如果單單只是做專題做單獨的研究，就是一個題目不斷推進；我今天感受到的像是我有好幾個題目同時進行，然後他們最終都是希望可以對 Offline RL 這個學術領域做出貢獻。</p>
+<p>過程大概是我先提出我的想法，然後把我有挑戰過自己的部分也連帶地告訴老師，比如說我提出一個想法，然後我會說「為什麼我提出這個想法？出發點是什麼？」「這個題目的價值是什麼？他比較難嗎？還是他有更好的效率？如 Convergence rate? Regret? Sample complexity?」「又或是他能夠取代或是超越原本的問題設定嗎？」等等的問題，透過這些反問跟回答，其實就可以知道這些題目的價值是什麼了。而理所當然的，一定有些問題是沒辦法馬上回答的，那我們就該找出對應的資料方向，去尋找文獻；或者是需要推導跟嘗試的，我們就要往那個方向去鑽研以及驗證。我認為這些過程都是非常有趣的，我想一年前的我一定不會做這些事情吧！XDDD 文獻探討找不到重點、閱讀文獻每篇都是逐字看完、想不出新的方向、驗證以及查找資料的能力也非常差勁等等。如今覺得自己稍稍有些成長覺得其實蠻欣慰的，也非常感謝秉均教授交/教給我了這麼多！我真的太幸福了！希望接下來我能繼續在這個奇幻的研究領域裡探險，然後能不畏懼的前進跟探索出更多新的知識跟發現。</p>
+<p>最後是晚上的同學會。我發現同學們大家都還是很要好，雖然一開始好像有點尷尬但後來熱開了以後大家就都會互相聊天了！老實說大家還是都一樣 XD 彷彿回到高中的時光一樣，真的很欣慰大家都有保有當初的快樂跟性格。我覺得我大一上的時候一度差點被壓迫到失去自我了 QQ 而且上了大學以後，大家都到了不同的地方也都看著不同的風景，我們能分享彼此的大學生活，去看跟想各式各樣的事蹟。而我也很快樂的跟幾位同學分享我在做的事情，我樂在其中的事物。我現在都很感激每個願意聽我說話的人，我覺得被認真聆聽真的也是非常幸福的一件事。其實有時候常常會覺得自己講的話到底會不會太嚴肅或是太無趣，總是有這樣的疑問。然而，還是有人願意傾聽我的聲音的，我覺得這樣就好了！至少，我的想法不是毫無意義的。還有，我本身就是一個喜歡與人分享我喜歡的事物的人，訴說那些事物也能讓我眼睛閃閃發亮。所以還是要再次感謝聽我說話的人們，以及跟我說話、分享、交換想法的人們！</p>
+<h2 id="繼續加油！！！"><a href="#繼續加油！！！" class="headerlink" title="繼續加油！！！"></a>繼續加油！！！</h2><p>總體上來說目前的狀況還行，還行的點在於能努力的事情還很多，能努力的時間也還夠（我覺得還夠啦XD），而且也比較知道自己該做些什麼跟該努力些什麼，下一篇文希望可以寫一寫我暑假做了哪些努力跟獲得了什麼進展，然後也把我二下的心得補完～！希望我的經驗…沒興趣的人可以當故事？有興趣的人可以幫挖寶吧，我覺得裡面還是有一些可以效仿的地方的吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧？雖然很少但至少希望這是一個振奮人心的故事XDDD 加油！希望自己加油！也希望我愛的人加油！&gt;&lt;大家都要努力XDDD最後一樣留一句我很愛的歌詞</p>
+<blockquote>
+<p>I’m still dreaming. Can’t hide this feeling. I want to see a world that I have never seen before.</p>
+</blockquote>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>coldEr66</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://colder66.github.io/2022/07/%E6%9A%91%E5%81%87gogo/">https://colder66.github.io/2022/07/%E6%9A%91%E5%81%87gogo/</a></span>
+                    </p>
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/05/%E9%9D%9C%E4%B8%8B%E5%BF%83%E8%8B%A6%E7%B7%B4/">靜下心苦練</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© coldEr66 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
