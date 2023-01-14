@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="coldEr66">
+
+
+    <meta name="subtitle" content="Practice makes Perfect">
+
+
+
+
+<title>三上心得 &amp; 2023 新希望 | cold66&#39;s blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+    
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/custom_css_source.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="cold66's blog" type="application/atom+xml">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">coldEr66&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">coldEr66&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">三上心得 &amp; 2023 新希望</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">coldEr66</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 10, 2023&nbsp;&nbsp;11:36:42</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="三上心得"><a href="#三上心得" class="headerlink" title="三上心得"></a>三上心得</h2><p>這個學期整體上的修課體驗我覺得是非常好的，可以說是沒有什麼討厭的課（除了某堂可能需要背東西的課讓我有時候很煩躁以外XD）。然後還有當機率助教，也是有很多逸聞趣事可以分享一下。最後就是這個學期的研究狀況，老實說不甚理想QAQ，只不過最近應該可以開始重回軌道了，也算是不幸中的大幸吧！</p>
+<h3 id="修課"><a href="#修課" class="headerlink" title="修課"></a>修課</h3><p>記錄一下每一堂課的一些心得。</p>
+<h4 id="分析導論（一）"><a href="#分析導論（一）" class="headerlink" title="分析導論（一）"></a>分析導論（一）</h4><p>這堂課等價於數學系的高等微積分俗稱「高微」。大家都說非常困難的內容對我來說是非常有趣的，我不敢說我學得有多好，只不過我相信我是非常享受其中的！這學期教授的進度其實蠻緩慢的，只不過把進度內全部的習題都做一遍也足夠讓我忙很久了XD</p>
+<p>最開頭主要就是在講一些基本實數空間的性質，然後就進到基本的一些拓墣學。我認為剛開始學這方面的東西時，拓墣學會是最為困難的部分，因為突然要接受很多抽象的概念，而且這部分常常是看著別人寫都會覺得自己很懂，然而自己要寫一些困難的題目時就會搞得亂七八糟XD</p>
+<p>接著就是比較跟大家常見的微積分有關的部分，序列極限、序列收斂。這一章節可以說是我在這堂課收穫最多的其中一個部分，因為這裡有教到函數序列的收斂性，這對我來說是個很新奇的體驗。分析函數的行為感覺對於資訊方面的研究是很有助益的，畢竟我們總是在考慮一堆函數 (hypothesis, classfier, value function, etc.) 的各種可能，而且也會不斷的更新他，所以函數序列或是函數空間對我的資訊腦 (特別強調資訊腦是有原因的) 來說可以說是幾乎最有趣的存在之一。<br>而接著就是教到連續函數，基本的概念教完以後，一樣有帶到連續函數序列的各種性質。最後學期末的時候教的內容也是超級有趣，主要是關於近似 (approximation) 和函數空間的 equicontinuity。只能說這兩個內容的證明都超級困難，但也正因如此他才更為有趣 (在這個方面挑戰總是好的XD)。而我感覺 equicontinuity 應該會是泛函分析裡蠻重要的一塊（嗎？）還沒學過希望之後有機會可以學得到XD。</p>
+<p>然後再講一下作業跟考試。我自己覺得我這學期學得最差的一個部分就是 connected sets，在這裡記錄一下鞭策一下自己，看看之後會不會回來看的時候自己已經是 connected sets 大師，還是相反地根本沒再用到然後也都忘光了呢 XD 在那一次作業裡我拿到了特別低的成績（與其次作業相比），那一次我覺得我一直沒有掌握到證連通集的手段，起手式是很容易 (假設他不連通然後建構他的 disconnection)，然而後面的事情我覺得我沒有學通所以就寫不太好。後來訂正的時候才發現其實開集合的性質遠比我想像中的還要強大 (這個部分待會也會新希望那邊再分享到)，所以也讓我長了不少知識。而至於其他的作業我基本上是能做多少習題就做多少習題，且考試前基本上會把考試範圍的全部題目都做過一遍 (或是至少想過他的證明架構)，所以其他作業的分數都算是蠻好看的。這個部分很值得快樂的點是因為某一次的作業去找助教聊聊天，變得跟助教還蠻熟的，他們也給了我不少建議，很感謝他們如此友善跟願意跟我分享XD</p>
+<p>而前面提到的做了很多習題，也讓我在考試中的發揮非常的好。練習題的時候我都會當作是在考試或是要寫給別人看的證明，一個數學系的朋友有教過我要在寫證明前先寫過一個證明架構，確定知道自己要寫的東西是對的，而且這麼做也才會讓自己的寫的證明看起來更有條理，讀的人才不會那麼痛苦。<br>我的考試策略可以推薦給大家 (前提是你們有來看我的 blog post XD)，我自己會在考試最開始先看過一次題目，然後用很少的時間去預測自己在考試時間的一半時間內可以拿到多少分數。然後還有值得一提的策略是我最開始不會在題目卷上做任何記號，這樣才能在檢查的時候不被自己的記號影響了重新判斷的狀況。<br>這麼做對於檢查考卷是非常有幫助的，考試當下都可能因為阿呆阿呆或是耍笨之類的種種原因寫下了很不可思議的魔法記號 (魔法就是沒有邏輯也沒有理由XD 大家待會也還會再看到這個東西哈哈)，然後記號就帶領你讓你再一次的走上歪路，所以我會取而代之地選擇在題目卷背面做記號，或是直接寫在答案本上之類的。<br>基本上我認為考試的難度都不高，除了一些小計算問題以外，我都能夠在考試一開始就認定自己能拿到 90 分以上的成績。而最後我也成功地在三次考試都拿到了滿分。但總覺得自己的分析能力還不夠優秀，感覺還要再看過更多的書，想更多的問題跟做更多練習才能再讓自己變得更爐火純青，希望自己能繼續加油。</p>
+<h4 id="最佳化演算法"><a href="#最佳化演算法" class="headerlink" title="最佳化演算法"></a>最佳化演算法</h4><p>感覺其他課的心得就不會像上面那樣那麼多XD 但還是簡單記錄一下吧！我覺得這堂課就是教授帶我們認識各種最佳化的方法，真的是各種，然後再教我們怎麼分析他的理論結果。整體上其實跟我在 RL 研究上做的事情沒有差太多，所以其實對我來說不算是新奇的內容。其中最讓我印象深刻的就是 Nesterov’s Accelerated Gradient Method (AGD)，這個方法是利用的 Momentum 的想法去做 GD 的加速，而他的理論分析是真的酷到一個極致。他可以把這個更新方式去跟彈簧系統做連結，因此可以把他的更新方式寫成一個與彈簧系統等價的常微分方程，並且透過解那個常微分方程來知道他的收斂行為。這件事情真的是非常特別，因為最常見的手段都是透過用問題的結構跟性質來做 error bounding 進以得到我們要的理論結果，而且我覺得在科學中找到等價關係都是非常珍貴且有趣的，畢竟誰也不會直覺覺得一個 AGD 算法可以跟彈簧有一樣的觀點吧！至於最後在做的 Final Project 的那篇論文則是運用這個方法來套用在 Minimax 問題上，我也覺得他們提供了很多有趣的 insights。然後很感謝俊宏願意跟我一組，希望我沒有雷到你。順帶一提，不得不說正在寫這篇 blog post 的我其實還沒做完 Final Project 的報告，真是不應該呀QAQ 然後也希望成績這個 by-product 可以不要太差&gt;&lt;</p>
+<h4 id="作業系統概論"><a href="#作業系統概論" class="headerlink" title="作業系統概論"></a>作業系統概論</h4><p>這是我們的必修，內容其實不少東西要背的，這部分是蠻痛苦的。只不過知道一些知識也是很重要的，所以我還是有乖乖地學習 (我真心誠意地感謝那些聽過我抱怨要背東西的人們 TAT)。整體上……成績應該算是很普通吧（？）像是我覺得我期中考就莫名地考的很爛XD 但也沒有很重要吧哈哈我覺得我該學到的想學的都學了，成績怎麼樣就不是重點了&gt;&lt;</p>
+<h4 id="通識課"><a href="#通識課" class="headerlink" title="通識課"></a>通識課</h4><p>最後就是通識課了，我修了兩門：智慧財產權法概論 &amp; 西洋歌劇史。有一說一這學期是我修通識課最快樂的一個學期，智財法非常好玩，雖然要回家自己看影片上課，然後上課時間還是要出席這一點讓他的學時蠻高的，但這門課的進行方式我非常喜歡，因為可以在課堂上分享自己的看法，我其實很喜歡拿著麥克風在大家面前說話，只不過最近都盡量不要隨便做這種事情XD 但在那堂課上就可以很自由地發表意見跟想法，我覺得是個很紓壓也很快樂的場合。</p>
+<p>而至於西洋歌劇史呢，我本身就很喜歡音樂，也蠻喜歡聽這些古典的音樂的。然後上課也讓我知道了很多古典音樂的知識，也讓我對歌劇蠻改觀的。因為大家都說歌劇其實非常難看等等之類的評價，但我自己覺得…還是有些好看的！比如說我期末報告看的《聯隊之花》就是一部非常精彩，不只音樂好聽還劇情緊湊的歌劇。如果有興趣可以去聽聽看XD</p>
+<p>總結一下真的必須說能修通識課修得這麼快樂真的是太難能可貴了，希望之後能有這一半的快樂就好XDDD</p>
+<h3 id="機率助教"><a href="#機率助教" class="headerlink" title="機率助教"></a>機率助教</h3><p>當助教是一個很好的體驗……我很想這麼說（？）確實整體上是蠻快樂的，除了在改作業地獄的時候。我覺得這學期最開心的一些事情分別是能夠跟另外兩位助教混熟，他們都對我很和善XD 也相處起來很快樂，之後有研究上的問題也可以跟他們一起討論，感覺是非常好的緣分。而在 TA hour 時可以教學生一些內容也是很好的體驗。</p>
+<p>至於改作業的一些軼聞趣事呢，最印象深刻的還是有一位霍格華茲來的學生吧。這是一位善於使用「魔法」的學生。他寫了一段證明，我來簡化一下他想所寫的證明：</p>
+<blockquote>
+<p>$ab + cd = ab(c + d)$</p>
+</blockquote>
+<p>誒～？這麼會長這樣呢，我猜他應該是分配律搞錯了吧。結果接下來是更浮誇的魔法操作：</p>
+<blockquote>
+<p>$a + b = c + d \Rightarrow a = c$ and $b = d$</p>
+</blockquote>
+<p>好了！我傻眼了，我只能說謝謝！我其實覺得這蠻誇張的，畢竟這種事情我覺得應該絕大多數人在國中國小可能就已經會了，但他連續做了這樣兩個魔法操作而且他還就讀交大真的讓我覺得挺詭異的&gt;&lt;但總之這種東西真的不知道該哭還是該笑，但也就只能給他低分了。</p>
+<p>而至於其他心得的話，我覺得就是我們助教要再主動一點跟老師溝通才行，老師其實非常地忙碌，很多事情我覺得我們應該要更主動去詢問的，比如說改考卷跟作業的期限，還有作業跟考試的答案等等，都要早一點確認以讓助教們自己不會因為同時有課業、研究、助教等壓力而忙到喘不過氣。但總之是一個很快樂的體驗，之後如果還有機會我還會想要再當助教！</p>
+<h3 id="研究"><a href="#研究" class="headerlink" title="研究"></a>研究</h3><p>不得不說，我認為這個學期的研究狀況蠻糟糕的。雖然認知到了自己需要改進，更加知道自己的弱點，也比以前更了解自己了（在藍色監獄中，甚八將這樣的事情稱為「覺醒」），然而我覺得儘管我覺醒了，我仍然缺乏動力。但值得慶幸的是我發現是自己沒有「去開始」，這意思是其實只要開始做，就會做到忘我了XD 代表這樣不是不喜歡這件事情，而是自己沒有調配好時間去做這件事情。我想以上這是值得檢討的事情吧！</p>
+<p>這學期主要在鑽研 Offline RL 這個領域，我認為他是一個非常有潛力的發展方向所以也對其特別熱衷！但這篇 blog post 我沒有要細講這個領域在做什麼，想知道可以來私訊我或是我之後有機會也會寫個 blog 來介紹他！</p>
+<h2 id="原子習慣"><a href="#原子習慣" class="headerlink" title="原子習慣"></a>原子習慣</h2><p>不知自從哪一天起，我開始不再在睡前看論文，因為有時候會導致自己睡不著XD 而取而代之的是我開始覺得「好像每天看一點課外書還不錯誒？」因為這樣的想法我就從學長那邊借了一本非常有名的書：「原子習慣」。接著就來談談幾個我收穫比較大的觀點。</p>
+<p>首先是習慣可以被看成一個獎勵循環，從提示 -&gt; 發現 -&gt; 執行 -&gt; 獎勵。提示是習慣的開始，固然重要，要創造提示的方法就是改變環境，比如說常常不是不想做，而是真的忘記了，所以我會把我想要做的事情相關的物品放在顯眼的地方，一想起來就會去做了。而實測起來真的很有效，原本常常會忘記的事情，現在都會記得了，甚至不用刻意創造環境也能夠達成，真的是很成功的案例XD</p>
+<p>而再來就是目標跟身份認同的部分，自己最近在減肥（雖然效果已經很顯著了但希望能繼續反覆製造成功），我發現如果我們對於自己「節食」這件事情認知是「我是為了減肥而節食」的話，那在減肥一有成效之後就會產生「我的目標達成了我可以稍微不節食一陣子」，那麼體重跟身材都會瞬間反彈。然而，如果我們對自己的認知是「我本來就是一個健康的節食的人」，這樣就不會受到那個目標影響。所以其實反思一下我自己，我常常把目標當作一個絕對的指標，但其實從很多例子看起來不是那麼合適，因為這樣一來做一件事情只要失去了那個「為了」就會失去他所有的意義。所以這個部分我給自己的期許是希望未來的自己能記住目標是給自己一個方向，然而不要因為達成目標了就停下腳步，因為我相信黃迺絜是想要成為某種人，而不是只想要達成某件事。比如說想要成為一個能深度批判思考的人，而不是單純為了發表研究或論文；又比如說想要成為一個足夠飲食健康且照顧自己的人，而不是只為了讓體重計上的數字少那零點零幾；又或是想要成為一個能夠守護自己所愛的人的人，而不只是為了讓什麼人開心就足已。而且我認為這樣對於心理健康也是很有幫助的，因為不再單純為了目標努力的話，就不會得失心那麼重，也會在過程中發現美，在身邊發現幸福，在心裡感到溫暖，而且我相信總是會找到出路。</p>
+<p>再來就是關於「無聊」的部分。這本書說真正的最終大魔王不是「困難」，而是「無聊」。因為當你反覆地做著一件事情的時候，無聊就會找上你，讓你做這件事情變得乏味，導致沒能繼續堅持而失敗。書中主要是著墨於「難度」，他說只要比自己的能力難一點點就能進入到心流的狀態進而讓自己不會覺得無聊。然而，「難度」在生活中是很難定義的。所以我自己現在的方針是，透過「創造有趣」來達成。做一件事情總是有很多種方法，只要創造出有趣的環節，那就不會無聊。最簡單的方法就是找幾個自己覺得有趣的東西，然後透過穿插這些有趣的東西在真正要做的事情當中，每天換不同的模式跟不同的有趣的東西，每天都像是重新開始，也每天都充滿驚喜，超好玩的！現在的我跟以前很不一樣的點還有一個就是我會想著如何每天創造一些驚喜，只要能夠做到這件事情，我相信不管什麼都會變得活絡，相信這個計劃能繼續執行下去的！</p>
+<p>最後就是最喜歡的「契約」環節。這本書提到一個例子是有一個人要減肥但一直都超懶，他跟健身教練還有老婆採用了一種叫做「習慣契約」的方式，他的核心理念就是讓「壞習慣變得痛苦」，只要不做這個好習慣（= 壞習慣），那就要給教練多少錢或是幫他老婆買什麼很貴的東西XD 而我覺得自己很幸運，能遇到一個非常重要的人陪我執行這個計畫，只能說超級有用，有用到無話可說。從我們開始「契約」之後，我的起床時間變早了，我的數學學習進度一步一步累積，我也養成了每天碰碰排球的習慣。這些微小的「原子習慣」長久以來一定能積少成多並且徹底的改變我的！</p>
+<p>做個小總結～我很推薦這本書，因為他本身不會無聊，所以可以一直看下去。其二是他很實用，提供了很多真的可以實行的方式而不單純只是在講習慣的理論而已。</p>
+<h2 id="2023-新希望"><a href="#2023-新希望" class="headerlink" title="2023 新希望"></a>2023 新希望</h2><p>這個 post 的最後一個部分是新希望的部分。首先去年的新希望之後還要來開獎一下把該請客的請一請（雖然老實說沒有達成幾個……有夠糟糕）。但經過這一年還是有發現一些事情，那就是現在計畫總是趕不上變化，年初所想的一切，都會在年中改變。所以 2023 新希望就決定是一些抽象一點的東西，然後就看看 2023 年這一年裡的我，能夠如何發揮吧。</p>
+<p>最先也是最重要的第一點，就是希望自己可以成為一個更喜歡自己的人，同時也成為一個自己更喜歡的人。而再來就是希望自己能成為一個更有智慧、思考層次更豐富的人。還有希望自己能夠更加善用自己的優點（多重屬性可以在不同的場合派上用場，要多加利用這一點呀！），也更直面自己的缺點。然後我也希望自己能夠更勇敢一點，我想對未來的自己說：「現在的你沒有什麼好怕的了！相信自己吧！也相信你自己所知道所擁有的！」最後就是希望自己能是個溫暖的人吧～希望可以給重要的人溫暖跟依靠，我想我能做的就是這些了。</p>
+<p>好！以上！我想我不需要張揚我接下來「具體」要做什麼，所以一樣有興趣的再來問我吧哈哈～希望這一年能繼續驚奇連連！最後用一句我覺得很適合拿來鼓勵自己的話：</p>
+<blockquote>
+<p>如果 2022 是蛻變的潛伏期，那就在 2023 耀眼地展翅高飛吧！</p>
+</blockquote>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>coldEr66</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://colder66.github.io/2023/01/%E4%B8%89%E4%B8%8A%E5%BF%83%E5%BE%97-2023-%E6%96%B0%E5%B8%8C%E6%9C%9B/">https://colder66.github.io/2023/01/%E4%B8%89%E4%B8%8A%E5%BF%83%E5%BE%97-2023-%E6%96%B0%E5%B8%8C%E6%9C%9B/</a></span>
+                    </p>
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/daily-life/"># daily life</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/07/%E6%9A%91%E5%81%87gogo/">暑假gogo</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© coldEr66 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
