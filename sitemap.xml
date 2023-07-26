@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://colder66.github.io/2023/07/Day-1-Japan/</loc>
+    
+    <lastmod>2023-07-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://colder66.github.io/2023/07/Day-0-Taiwan-to-Japan/</loc>
     
     <lastmod>2023-07-25</lastmod>
@@ -123,7 +130,7 @@
 
   <url>
     <loc>https://colder66.github.io/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -131,42 +138,42 @@
   
   <url>
     <loc>https://colder66.github.io/tags/hexo-test/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/daily-life/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/atcoder-%E9%A1%8C%E8%A7%A3/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/virtual-plan/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/research/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://colder66.github.io/tags/Daily-life/</loc>
-    <lastmod>2023-07-25</lastmod>
+    <lastmod>2023-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
