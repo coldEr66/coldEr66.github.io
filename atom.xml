@@ -6,7 +6,7 @@
   <link href="https://colder66.github.io/atom.xml" rel="self"/>
   
   <link href="https://colder66.github.io/"/>
-  <updated>2023-07-31T14:33:27.901Z</updated>
+  <updated>2023-07-31T15:05:43.314Z</updated>
   <id>https://colder66.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Day 7: Hawaii--ICML 2024 Workshop (1)</title>
+    <link href="https://colder66.github.io/2023/07/Day-7-Hawaii-ICML-2024-Workshop-1/"/>
+    <id>https://colder66.github.io/2023/07/Day-7-Hawaii-ICML-2024-Workshop-1/</id>
+    <published>2023-07-31T14:39:40.000Z</published>
+    <updated>2023-07-31T15:05:43.314Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ICML-2023-Workshop"><a href="#ICML-2023-Workshop" class="headerlink" title="ICML 2023 Workshop"></a>ICML 2023 Workshop</h2><p>今天是 ICML Workshop 的第一天，也就是我們要報告的日子！老實說前一天晚上挺緊張的，原本要要打開 poster 練習，但每天晚上我們都會大家一起四個人（老師、我、兩個學長）一起分享各種事情跟聊天，所以後來就蠻晚的了我就沒練習了哈哈哈，想說白天再練習，結果直接睡到超晚，超好笑。到會場吃個午餐就要直接上陣了！雖然沒有太多練習，但對自己的 work 的掌握度還是很高的！也對 RL/optimization 的這些知識是非常熟的！再加上～多少還是有點一些教學能力的技能點的，所以講解也還算 ok，可以把問題講的有趣！整體下來都有成功讓別人覺得有趣，也基本上有回答不錯的答案給每個聽眾！</p><p>比較讓人覺得有趣的是，有數個聽眾問說為什麼 empirically 沒有什麼人在使用 Nesterov 在 RL 上，其實前一天跟 Jane Street 的人聊就得知還是有人在用的，也有一個聽眾說他們有在用。我跟老師的結論是應該是因為這是一個 well-known trick，所以大家不會拿他來寫論文吧～這也是一個滿有趣的結論的，畢竟過去確實沒有很仔細想過這個問題。</p><p>接著就是下午去聽學長的 poster，雖然我不是應用人，但整體下來還是覺得他的動機跟架構都滿有趣的！基本上是在做想要透過羽球選手的動機來預測羽球選手的下一步操作。這樣子聽下來我也覺得這個題目很有發展理論的空間，畢竟這很 Game，感覺可以找個合適的 formulation 來使用，然後看看有沒有什麼值得探討的有趣的地方。感覺學長也報的很開心，皆大歡喜！</p><h2 id="Taiwan-Night"><a href="#Taiwan-Night" class="headerlink" title="Taiwan Night"></a>Taiwan Night</h2><p>最後就是晚上去了 Taiwan Night 這個活動，基本上就是一群台灣人的聚會。最印象深刻的大概就是可以好好的跟 Ching-En Cheng 聊天吧！只能說跟他聊天收穫實在太多了…他是一個 Microsoft Resaerch (MSR) 的很厲害的研究者，我有跟他聊關於博班申請的事情，也有跟他聊關於機器人學習的各種可能，也有跟他聊有沒有機會跟 MSR 裡面的某些人合作等等。後來他也說了很多他對於 Offline RL 的想法，有人問他說他怎麼看 stochastic environment，他說這東西只是 mathematical assumption，現實世界很難驗證是不是 stochastic，沒有 stochastic 只有 partially observable。這也確實是我的想法XDD 所以我也可以理解為什麼很多人都說 POMDP 非常重要（但也非常難XDDD）。還有一個很好笑的是他說他對於機率這個東西想法也是各種轉換，他說他以前一下是 Frequentist 一下是 Bayesian，又一下是 Frequentist 一下是 Bayesian。我們問他他現在到底比較相信哪一個的時候！他的回答非常有趣：</p><blockquote><p>現在是 anything that works!</p></blockquote><p>確實！超合理哈哈哈！最後大概就是我簡單地跟他說了一下我的狀況跟未來的規劃～他也是（可能有點客套的）說很好很棒加油XDDD</p><p>最後值得紀念的是…這一餐 TSMC 請大家吃飯，應該請了至少…$1000 以上喔…只能說太感謝 TSMC 拔拔了…也只能說真的太狠了…</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;ICML-2023-Workshop&quot;&gt;&lt;a href=&quot;#ICML-2023-Workshop&quot; class=&quot;headerlink&quot; title=&quot;ICML 2023 Workshop&quot;&gt;&lt;/a&gt;ICML 2023 Workshop&lt;/h2&gt;&lt;p&gt;今天是 IC</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Day 6: Hawaii--ICML 2024 Conference (3)</title>
@@ -423,29 +443,6 @@
     
     
     <category term="daily life" scheme="https://colder66.github.io/tags/daily-life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://colder66.github.io/2020/09/test/"/>
-    <id>https://colder66.github.io/2020/09/test/</id>
-    <published>2020-09-09T12:45:37.639Z</published>
-    <updated>2020-09-09T12:45:37.639Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="My-first-post"><a href="#My-first-post" class="headerlink" title="My first post"></a>My first post</h1><p>I’m coldEr66.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;My-first-post&quot;&gt;&lt;a href=&quot;#My-first-post&quot; class=&quot;headerlink&quot; title=&quot;My first post&quot;&gt;&lt;/a&gt;My first post&lt;/h1&gt;&lt;p&gt;I’m coldEr66.&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="hexo test" scheme="https://colder66.github.io/tags/hexo-test/"/>
     
   </entry>
   
