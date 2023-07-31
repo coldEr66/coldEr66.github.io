@@ -6,7 +6,7 @@
   <link href="https://colder66.github.io/atom.xml" rel="self"/>
   
   <link href="https://colder66.github.io/"/>
-  <updated>2023-07-31T04:13:49.045Z</updated>
+  <updated>2023-07-31T14:33:27.901Z</updated>
   <id>https://colder66.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Day 6: Hawaii--ICML 2024 Conference (3)</title>
+    <link href="https://colder66.github.io/2023/07/Day-6-Hawaii-ICML-2024-Conference-3/"/>
+    <id>https://colder66.github.io/2023/07/Day-6-Hawaii-ICML-2024-Conference-3/</id>
+    <published>2023-07-31T14:28:47.000Z</published>
+    <updated>2023-07-31T14:33:27.901Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Last-Day-of-ICML-2023-Conference"><a href="#Last-Day-of-ICML-2023-Conference" class="headerlink" title="Last Day of ICML 2023 Conference"></a>Last Day of ICML 2023 Conference</h2><p>這一天是 conference 的最後一天，這天我除了一篇 Nan Jiang 的學生的 work 以外，我沒有看到什麼其他的特別感興趣的 work。但我還是走在 poster 那間到處看看有沒有什麼理論的 work，去跟作者聊聊天，我總共去聽了一個 Convolutional NTK 還有 Neural FQI 這些 work 吧，因為跟作者閒聊了一陣子，問問他們的看法之後，時間所剩不多，我就去看我最感興趣的那個 work 了。</p><p>那個 work 是 <a href="https://arxiv.org/abs/2302.02571">Offline Learning in Markov Games with General Function Approximation</a>。我從以前就很喜歡 Game，感覺如果可以做 Game 相關的東西的話一定挺酷的。基本上這影片就是在放寬各種條件，考慮multi-player, general-sum, 然後同時 unify 各種 equilibrium，也放寬了 Game 中的 coverage assumption。後來跟他閒聊以後他問我是不是要申請博班，我有跟他聊了一會兒博班的事情，然後後來又用訊息聊聊天，再約了實體見面聊申請跟研究。後來聊了一個多小時，在講關於申請還有 collaborate 的事情，真的非常酷，希望這些收穫之後都能修成正果！而值得分享的是他雖然是中國人，但高中也是打奧賽選訓的，大學也是比 ICPC 的，然後大學都是讀 CS，而且現在也都在做RL！只能說太巧合了XDDDD 所以我們挺聊得來的，因為我們在意的很多東西都滿像的，比如說研究的類型或是方向等等，聊起來感覺都很有趣，不知道以後有沒有機會跟他合作呢！如果可以的話應該蠻酷的～</p><p>他也有跟我說現在 Nan Jiang 在探討什麼問題，他說他現在都在解 POMDP，因為 single-agent offline RL 的理論好像快被解完了（？）所以他說要馬解 POMDP 不然就是 multi-agent。然後他也有說他感覺厲害的人真的是起床就在探討問題，看著 open questions list，去想哪些解決了哪些還沒，然後嘗試去解決一些子問題等等。不得不說，感覺超辛苦但是真的超級酷的！希望自己可以慢慢往這邊靠近吧～當個能夠照顧好生活、照顧好身邊的人、也照顧好自己研究事業的人！（算是對自己的期許！）</p><p>最後還是有再去看看其他 poster，為了我們的 Nesterov，我就去看了一篇有關於 Nesterov 的 work。是個韓國人的 work，他挺好笑的，我在猜是不是因為我曬得很黑他以為我是越南人？XDD 但老師覺得他在瞎猜，因為我顯然不夠黑XDDD</p><h2 id="趣事分享"><a href="#趣事分享" class="headerlink" title="趣事分享"></a>趣事分享</h2><p>在 conference 都結束以後，大家一起走去吃飯，在路上有一台車子開著窗戶，播著很大聲的音樂，然後兩個人在駕駛跟副駕上唱歌，還唱和聲，而且唱的歌是我也會唱的歌！（忘記是什麼了，但沒記錯的話是 I Want It That Way）然後我就在大馬路上跟著他們一起唱！超嗨！這種人在台灣應該只會被當怪人或瘋子吧，然後我也會是怪人或瘋子。但他們在唱的時候街上好多人都在幫他們拍手打拍子，像演唱會一樣！自己跟著唱就好像也在表演一樣，超開心的哈哈哈哈！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Last-Day-of-ICML-2023-Conference&quot;&gt;&lt;a href=&quot;#Last-Day-of-ICML-2023-Conference&quot; class=&quot;headerlink&quot; title=&quot;Last Day of ICML 2023 Confer</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Day 5: Hawaii--ICML 2024 Conference (2)</title>
