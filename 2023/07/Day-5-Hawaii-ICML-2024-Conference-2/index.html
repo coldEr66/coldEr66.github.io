@@ -14,7 +14,7 @@
 
 
 
-<title>Day 4: Hawaii--ICML 2024 Conference (1) | cold66&#39;s blog</title>
+<title>Day 5: Hawaii--ICML 2024 Conference (2) | cold66&#39;s blog</title>
 
 
 
@@ -211,7 +211,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Day 4: Hawaii--ICML 2024 Conference (1)</h1>
+            <h1 class="post-title">Day 5: Hawaii--ICML 2024 Conference (2)</h1>
             
                 <div class="post-meta">
                     
@@ -220,7 +220,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">July 30, 2023&nbsp;&nbsp;13:27:44</a>
+                        Date: <a href="#">July 30, 2023&nbsp;&nbsp;17:28:18</a>
                         </span>
                     
                     
@@ -229,12 +229,13 @@
         </header>
 
         <div class="post-content">
-            <h2 id="Attending-ICML-Conference"><a href="#Attending-ICML-Conference" class="headerlink" title="Attending ICML Conference"></a>Attending ICML Conference</h2><p>開頭就是一波智障操作，由於前一天「超級」晚睡（大概五點），所以今天原本想說睡三個小時就去 conference 好了，殊不知…直接睡到 11. 多，廣達學長也在房間跟我一起待到差不多這個時間，我們才一起出門。雖然看起來不太順利，但一到會場附近就有一些還不錯的事情，那就是吃飯！在 Hawaii Convention Center 正對面有一家韓式烤肉吃到飽的餐廳，他有提供外帶服務，我點了一個牛排丼飯，超級無敵大份，也很好吃，而且最關鍵的部分是…他只要 $13!!!! 我跟廣達學長都覺得，真的是太狠了，好吃又便宜，最讚那種XDDD</p>
-<h3 id="Poster-Session-1"><a href="#Poster-Session-1" class="headerlink" title="Poster Session 1"></a>Poster Session 1</h3><p>…好像搞錯重點了…? XD 吃飯不是重點，接下來就是去參加 poster session。第一天其實沒有太多我非常熟悉的 topics，所以這裡簡單講一下兩個我印象比較深刻的吧。第一個是 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.12966">Towards Theoretical Understanding of IRL</a>，這一篇基本上就是在用 PAC framework 在做 IRL，找 feasible reward set。由於我也不太了解 IRL，所以只能聽懂一些 theoretical guarantee 的部分，但很明顯看出他想解的問題很難，而且他提供的保證也很撐充足。它不只有算出 sample complexity，他還有算出在不同設定下 (time-homogeneous/inhomogeneous) 的 sample lower bound，也就是如果想要解這個問題，不可能用小於某個量的資料來解這個問題，而且他的 sample complexity 是幾乎 match 這個 lower bound 的（也就是幾乎是 optimal 的演算法），如果對 IRL 的理論有興趣，可以從這篇出發，再追訴過去的文獻我想會是一個不錯的方式。</p>
-<p>接著就是自己比較熟悉的領域了，第二個我比較印象深刻的 work 是 <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=T5VlejGx7f">Model-based Offline Reinforcement Learning with Count-based Conservatism</a> ，這一篇基本上就是在做用數 state/action 的數量來定義 uncertainty，數量越少可想而知 uncertainty 就越高，我們就越該對這些 state-action 感到悲觀 (pessimism/conservatism)。而 for continuous state/action，計數是不可行的（因為基本上不會看到重複的 state/action，所以計數就沒有意義），通常會用一個 density model 去做 representation，擁有一樣的 feature 的 state-action 就會算在同一個 class 裡面，這樣某種程度上就是轉換成離散的 state-action，也就變成可以計數了。基本上這一篇演算法具體做的事情不算新，雖然我不太確定這方法有沒有被用在 Offline RL 上但至少我確定他很久之前 (About 2016-17) 就出現在 Exploration 的文獻上了。然而，這一篇是很有趣的 work，因為 density model 轉出來的 representation 是沒有理論保證的，他們提供了特定 representation 轉出來的 pseudo-count 的理論保證。也就是說他們知道以 pseudo-count 來算的 uncertainty 具體有什麼樣子的 bound，有什麼樣子的機率等等。所以可以設計出 theoretically-grounded 的演算法，這一點是非常有趣的。而他們的實驗部分也做的很有趣，他們透過在不同的 dataset 上，去考慮不同的 bonus terms。也就是說分別考慮把 uncertainty 當作 +/0/-，分別是 optimism/average/pessimism，然後實驗結果也可以明顯看出，在 expert data 上 optimism 遠遠勝出，且在 random data 上 pessimism 遠遠勝出，基本上就是在 data 跟實驗上看出 behavior cloning (expert) 到 offline RL (random) 之間的 continuous spectral，這種 continuous spectral 是我很喜歡的一種展現形式，我也覺得是非常有意義跟有趣的。我認為任何的兩個極端都應該看看他們之間有沒有 continuous spectral，因為這樣才更有機會得到 best of the both worlds。</p>
-<p>在這個 poster 的時候，由於內容我掌握的還蠻好的，所以幾乎有把 poster 上看得到的東西全都理解。有另一個聽眾問作者一個問題，然後因為作者是韓國人我猜他沒有聽很懂那個人問什麼，問了很多很多次以後，我還是決定幫忙一下。我先跟問的人確認問題，然後再跟作者確認我的想法對不對，兩邊都獲得了肯定的答案！真好哈哈哈！也代表自己有完全 get 到問題跟研究的想法吧～希望以後看自己領域裡的 work 都可以做到這種程度，也希望可以找一些人來討論討論，進以增進自己的各種想法。</p>
-<h3 id="Oral-Session"><a href="#Oral-Session" class="headerlink" title="Oral Session"></a>Oral Session</h3><p>Poster session 結束以後，就是等待一下要去聽 oral session，也就是特別厲害的 work 會有讓他們報告的機會。有兩個 rooms for RL oral，我選了 RL2，因為老師他們去聽 RL1 我們想說這樣可以交換資訊。總結下來是，RL2 都是非常應用的 works，我很失敗的幾乎沒一個 work 有聽懂的。最印象深刻的是 Sergey Levine 的學生的 work 在講述如何從 passive data 中學習。這裡不贅述 passive data 是什麼因為我也不太懂…只能抓到一個 high-level concept，大概就是在說如果有很多很多影像片段，裡面其實有很多資訊，比如說電線竿長怎樣、消防栓長怎樣等等的各種資訊，其實都是可以提供機器人學習的，那如果好好運用這些片段 (passive data) 然後如何在其中學習呢？但最讓我印象深刻的原因不是他們的 work 多厲害，因為聽不懂所以不能保證他們「非常」厲害，只不過厲害是一定的。最讓我印象深刻的原因是：口才真的差異太大了！那個講者的口才超級無敵好！我完全無法想像自己可以用英文講出那些那麼有趣的話跟語調，感覺要變成那樣還要練習太多年了 XDD 但不妨試試看，至少可以想像母語使用者至少可以像我講中文一樣順暢跟流利吧，希望自己可以慢慢練習並且慢慢靠近那個水準。讓自己開過眼界之後，就更會清楚知道世界有多大，也更會想著要如何去 attain 那樣的境界吧！這樣的話我可能會在接下來的文章裡不斷地講到 XDDD 我已經可以預想了哈哈哈哈</p>
-<h2 id="搞笑"><a href="#搞笑" class="headerlink" title="搞笑"></a>搞笑</h2><p>最後還是來輕鬆一點的搞笑環節。剛剛提到 oral 我都聽不懂，由於真的聽不懂，我差點在 oral 的演講廳裡面睡著，有些 work 連他們想解什麼問題都不是很清楚，完全不能 get 到任何重點，數次差點睡著XDDD 敬啟期待接下來的文章XDDD 我會繼續努力紀錄的。</p>
+            <h2 id="非常讓人震撼的一天"><a href="#非常讓人震撼的一天" class="headerlink" title="非常讓人震撼的一天"></a>非常讓人震撼的一天</h2><p>這一天一早去買了一個燻鮭魚吐司，非常好吃，$16 其實也還算可以接受！非常滿意。會在這裡特別講這個，是因為我想這一天唯一需要紀錄的事情大概也只有這一個吧XD 其他重要的事情我想我都不會忘記了吧。接下來就進入正題吧！</p>
+<p>首先是白天的 Poster Session，由於知道非常厲害且崇拜的教授 Nan Jiang 有兩個 works 是在這個時間 present，我一開始的目標就先放在這兩個 works 上，希望可以問問題，問爆！沒想到在 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2302.02252">Reinforcement Learning in Low-Rank MDPs with Density Features</a> 的 poster 前居然可以看到 Nan Jiang 本人！看到他本人沒有跟想像中差太多，我想是因為我看過他很多的演講，他說話起來的感覺我也都感受過了，所以大概比較沒辦法感受的就是他的身材跟身高吧，只不過身材身高也都是正常人，所以看到人的當下除了「哇！看到偶像了！」以外沒有其他感覺XDDD 接著就是聽他報告這一篇 paper，原本其實就大概知道這篇 work 的核心了，但可以直接問他問題還是很棒的。原本完全不懂的 low-rank MDP，有些需要用很多文獻去補足的部分，也算是從他那邊可以先得到一些 insights，之後看起來應該也會容易得多吧！基本上光是從對話中就可以感受到他是真的非常厲害，而且我個人覺得不是虛有其表的厲害！我有問他一個 assumption 的條件是否容易成功，因為對於 density features 做積分還要 bounded 整個看起來就不太直觀，也不知道什麼時候會 hold，但感覺起來就是一個 normalization assumption。問了他以後他說這多少還算是常見的假設。而接著我問他為什麼需要的時候，我提出了我的猜測，他說雖然不太確定細節但大概應該沒錯XDDD 我也大概可以想像為什麼需要那個假設啦，但還是確認一下討論一下沒什麼虧！這篇 work 的一作也很厲害，由於我還沒仔細看過他們的分析，所以決定直接問去得到 high-level intuition，聽完之後覺得「超級合理，但感覺還是很難XDD」只不過或許是對於我的研究有幫助的想法，所以之後希望還是可以再去細看吧～一整個就非常 shocked！也同時一整個很嗨XDDD</p>
+<p>後來去看他學生的另一個 work: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2307.13332">The Optimal Approximation Factors in Misspecified Off-Policy Value Function Estimation</a>，這個一作可能看我不是本地人說話慢條斯理的，他可能也是怕我聽不懂吧XDDD 只不過後來我說出一些東西以後，他也覺得我應該不是初學者，就加快速度了XDD 有種稍微被認同的感覺，真好XDDD 聽著他的講解，到一半以後有兩個 MSR 的大佬來到他的 poster 前，我看到他們的 badge 以後心想: “Damn! So cool!” 太浮誇啦～！除了 Nan Jiang 以外還可以見到另外兩個大佬，簡直就是太幸運了！後來他們就請一作解釋他的 work 給他們聽，他們的對話十分有趣。一作跟他們說：「我想你們應該都知道我在做什麼了。」他們回說：「沒有啦～我們都不會，你是作者你來講解一下吧！」然後他開始講解以後，討論就開始了，在旁邊聽他們討論也可以收益良多。因為他們都非常厲害，知道的東西非常多，想法也很廣，問的問題都非常深入，會有一種「我完全沒辦法想到這些」的那種感覺！二次震撼，實在太厲害了…後來他們就各種聊一聊天，然後討論一下這個題目有沒有什麼延伸或是什麼有趣的改變，最後我就請他們跟我拍照！有成功跟他們拍到照。我覺得真的太酷了XDD</p>
+<h2 id="學習"><a href="#學習" class="headerlink" title="學習"></a>學習</h2><p>我發現這些大佬給我的感覺其實都蠻相似的，不論是豪放型的還是內斂型還是什麼型的都無所謂，關鍵就是我光是用感覺的就能得知他們懂的真的很多，而且非常清楚，看得多想的也多，就可以有更深的體悟吧。他們在最頂尖的位置待久了，就可以更有效率地去產生新的想法跟研究，我希望自己有朝一日也能像他們一樣知識淵博想法豐富吧！繼續磨練繼續磨練！</p>
+<p>這種震撼的機會大概就是原本已經知道天很高了，現在是某種程度上知道天有多高了！更有一個方向可以去想像真正做最頂尖研究的人們是什麼樣子的，然後也讓自己更加進步吧！</p>
+<h2 id="分享小事情"><a href="#分享小事情" class="headerlink" title="分享小事情"></a>分享小事情</h2><p>不得不說看到認識的人在報告其實挺有趣的，這一天的下午的 poster session 我看到認識的教授在報他們的 poster，就湊過去看一下，原本只是想打個招呼沒有要久留的，結果被其他作者推銷 presentation，然後就只好留下來好好把它聽完了哈哈哈！非常慚愧地是主要是應用的 work，我基本上問不出什麼好問題嗚嗚特別是我完全不了解這些背景的時候，如果是 Offline RL，我可能還可以提出一些有趣的問題，但其他的我不了解的，真的會覺得自己像個白癡呢XDDD</p>
+<p>最後分享一個好笑的事情，在跟大佬拍照時，其中一位剛好在跟家人打視訊電話，然後我說要拍照的時候，他就跟他家人說「不好意思喔，現在有個人要跟我們拍照，簡直就像自己是個名人一樣，先掛囉～」接著說能這樣當名人真棒XDDD 超級有趣的人們，是不是厲害的人們都非常有特色呢？XDD 也真好奇自己的特色是什麼，希望在未來自己也能夠有這種特殊的魅力！加油加油！</p>
 
         </div>
 
@@ -249,7 +250,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://colder66.github.io/2023/07/Day-4-Hawaii-ICML-2024-Conference-1/">https://colder66.github.io/2023/07/Day-4-Hawaii-ICML-2024-Conference-1/</a></span>
+                        <span><a href="https://colder66.github.io/2023/07/Day-5-Hawaii-ICML-2024-Conference-2/">https://colder66.github.io/2023/07/Day-5-Hawaii-ICML-2024-Conference-2/</a></span>
                     </p>
                 
                 
@@ -272,10 +273,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2023/07/Day-5-Hawaii-ICML-2024-Conference-2/">Day 5: Hawaii--ICML 2024 Conference (2)</a>
             
-            
-            <a class="next" rel="next" href="/2023/07/Day-3-Hawaii/">Day 3: Hawaii</a>
+            <a class="next" rel="next" href="/2023/07/Day-4-Hawaii-ICML-2024-Conference-1/">Day 4: Hawaii--ICML 2024 Conference (1)</a>
             
         </section>
 
