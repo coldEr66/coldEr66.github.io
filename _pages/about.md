@@ -4,7 +4,6 @@ title: About
 permalink: /
 subtitle: >
   Incoming Ph.D. Student<br>
-  Affiliations: <a href="https://www.csl.cornell.edu/">Computer System Laboratory</a><br>
   Department of Machine Learning<br>
   Carnegie Mellon University<br>
 
