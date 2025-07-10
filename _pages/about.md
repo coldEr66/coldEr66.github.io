@@ -3,14 +3,14 @@ layout: about
 title: About
 permalink: /
 subtitle: >
-  Ph.D. Student<br>
+  Incoming Ph.D. Student<br>
   Affiliations: <a href="https://www.csl.cornell.edu/">Computer System Laboratory</a><br>
-  Department of Electrical and Computer Engineering<br>
-  Cornell University<br>
+  Department of Machine Learning<br>
+  Carnegie Mellon University<br>
 
 profile:
   align: right
-  image: my_pic2.png
+  image: Nai-Chieh-Huang.jpg
   image_circular: false # crops the image to make it circular
   more_info: false # adds a "more info" link to the end of the profile
 

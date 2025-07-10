@@ -3,21 +3,21 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Chi-Chih
-chinese_name: 張機智
+first_name: Nai-Chieh
+chinese_name: 黃迺絜
 middle_name: 
-last_name: Chang
-email: cc2869@cornell.com
+last_name: Huang
+email: naichieh@andrew.cmu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Chi-Chih Chang
+  Personal website of Nai-Chieh Huang
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: cornell_seal_simple_web_b31b1b.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: cmu_mld_website_icon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://shadowpa0327.github.io # the base hostname & protocol for your site
+url: https://coldEr66.github.io # the base hostname & protocol for your site
 baseurl:
 last_updated: True # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
