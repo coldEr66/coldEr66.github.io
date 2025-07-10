@@ -1,9 +1,27 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"ICLR":
+  # url: https://nips.cc/Conferences/2023
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"CVPR":
+  # url: https://nips.cc/Conferences/2023
+  color: "#00369f"
 
-"Vision":
-  color: "#009f36"
+"NeurIPS":
+  # url: https://nips.cc/Conferences/2023
+  color: "#00369f"
+
+"AAAI":
+  # url: https://aaai.org/Conferences/AAAI-23/
+  color: "#00369f"
+
+"ICCV":
+  # url: https://lpcv.ai/2021ICCV/program
+  color: "#00369f"
+
+"3DV":
+  # url: https://journals.aps.org/
+  color: "#00369f"
+
+"arXiv":
+  # url: https://journals.aps.org/
+  color: "#00369f"
