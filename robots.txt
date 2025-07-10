@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://shadowpa0327.github.io/sitemap.xml
+Sitemap: https://coldEr66.github.io/sitemap.xml
