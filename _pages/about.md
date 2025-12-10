@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 subtitle: >
-  First-year Ph.D. Student<br>
+  Ph.D. Student<br>
   Machine Learning Department<br>
   Carnegie Mellon University<br>
 
